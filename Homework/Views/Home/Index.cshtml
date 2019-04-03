@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <p>Type title and status of new query and click 'Create' => create new query</p>
+    <form method="post" action="~/api/work/Create">
+        <table>
+            <tr>
+                <td><p>Todo :</p></td>
+                <td><input type="text" name="plan" /> </td>
+            </tr>
+            <tr>
+                <td><p>Status :</p></td>
+                <td><input type="text" name="status" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Create" /> </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div>
+    <p>Type existing id from list to first field and in other fields will write new data when you click 'Update' => update query</p>
+    <form form method="put" action="~/api/work/Update">
+        <table>
+            <tr>
+                <td><p>Key :</p></td>
+                <td><input type="text" name="key" /> </td>
+            </tr>
+            <tr>
+                <td><p>Todo :</p></td>
+                <td><input type="text" name="plan" /> </td>
+            </tr>
+            <tr>
+                <td><p>Status :</p></td>
+                <td><input type="text" name="status" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Update" /> </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div>
+    <p>Type existing id from list and click 'Delete' => delete query</p>
+    <form form method="delete" action="~/api/work/Delete">
+        <table>
+            <tr>
+                <td><p>Key :</p></td>
+                <td><input type="text" name="key" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Delete" /> </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div>
+    <p>Click 'Get All' => see todo list</p>
+    <form method="get" action="~/api/work/GetAll">
+        <table>
+            <tr>
+                <td><input type="submit" value="Get All" /> </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</div>
